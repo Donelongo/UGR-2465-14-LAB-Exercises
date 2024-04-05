@@ -26,6 +26,17 @@ class Shopping extends StatelessWidget {
 
               ),
               const SizedBox(height: 8.0),
+                const ListTile(
+                  leading: Icon(
+                    Icons.check_circle,
+                    color: Colors.green,
+                    size: 50,
+                  ),
+                  title:
+                      Text('Compeleted', style: TextStyle(color: Colors.green)),
+                  subtitle: Text("Order Competed 24 July 2024"),
+                  trailing: Icon(Icons.chevron_right, size: 30),
+                ),
               const Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
