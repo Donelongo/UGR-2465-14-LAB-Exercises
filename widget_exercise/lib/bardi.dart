@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const Bardi());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class Bardi extends StatelessWidget {
+  const Bardi({super.key});
 
   // This widget is the root of your application.
   @override
@@ -50,7 +50,7 @@ class MyApp extends StatelessWidget {
         body: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Image.asset("../assets/coffee.jpg", height: 400, width: double.infinity, fit: BoxFit.fill,),
+            Image.asset("./assets/coffee.jpg", height: 300, width: double.infinity, fit: BoxFit.fill,),
             const SizedBox(height: 20,),
             const Padding(
               padding: EdgeInsets.all(8.0),
