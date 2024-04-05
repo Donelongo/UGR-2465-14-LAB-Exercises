@@ -72,8 +72,9 @@ class Bardi extends StatelessWidget {
               padding: EdgeInsets.all(8.0),
               child: Column(
                 children: [
-                  Text("Bardi Smart Light Bult 120W LED WIFI" , style: TextStyle(fontWeight: FontWeight.w500),),
-                  Text("Bardi Smart Light Bult 120W LED WIFI" ,style: TextStyle(fontWeight: FontWeight.w500),),
+                  Text("" , style: TextStyle(fontWeight: FontWeight.w500),),
+                  Text("Lorem ipsum dolor sit amet"),
+                  Text("Lorem ipsum dolor sit amet" ,style: TextStyle(fontWeight: FontWeight.w500),),
                 ],
               ),
             ),
