@@ -120,24 +120,39 @@ class Utracker extends StatelessWidget {
           ],
         ),
       ),
-      const Column(
-          children: [
-            RowSection(),
-            RowSection(),
-            RowSection(),
-            RowSection(),
-            RowSection(),
-
-          ],
-      )
-    ]
-  )
-      );
+      const Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+            MyCard(text: "Map", icon: Icons.map),
+            MyCard(text: 'Live Location', icon: Icons.location_pin),
+            MyCard(text: 'History ', icon: Icons.history),
+          ]),
+          const Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+            MyCard(text: "Set Geofence", icon: Icons.map),
+            MyCard(text: 'Detail info', icon: Icons.info),
+            MyCard(text: 'History ', icon: Icons.history),
+          ]),
+          const Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+            MyCard(text: "Change center Number", icon: Icons.phone_android),
+            MyCard(text: 'Disabled Menu', icon: Icons.key),
+            MyCard(text: 'set GPS ', icon: Icons.hourglass_empty_outlined),
+          ]),
+          const Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+            MyCard(text: "Restart Device", icon: Icons.restart_alt),
+            MyCard(text: 'Device Saving mode', icon: Icons.battery_saver),
+            MyCard(text: 'Normal Mode ', icon: Icons.battery_full),
+          ]),
+          const Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+            MyCard(
+                text: "Shutdown device",
+                icon: Icons.power_settings_new_outlined),
+            MyCard(text: 'Disabled Menu', icon: Icons.notes_rounded),
+            MyCard(text: 'Contact Us ', icon: Icons.contact_mail),
+          ]),
+        ]));
+  }
 }
-    }
 
-class BoxSection extends StatelessWidget {
-  const BoxSection({
+class MyCard extends StatelessWidget {
+  const MyCard({
     super.key,
     required this.text,
     required this.icon,
@@ -149,29 +164,13 @@ class BoxSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 80,
-      width: 80,
+      height: 100,
+      width: 100,
       margin: const EdgeInsets.all(10),
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [Icon(icon), Text(text)],
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [Icon(icon, color: Colors.blue), Text(text)],
       ),
-    );
-  }
-}
-
-class RowSection extends StatelessWidget {
-  const RowSection({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        BoxSection(text: 'map', icon: Icons.map),
-        BoxSection(text: 'live location', icon: Icons.location_city),
-        BoxSection(text: 'map', icon: Icons.map),
-      ],
     );
   }
 }
